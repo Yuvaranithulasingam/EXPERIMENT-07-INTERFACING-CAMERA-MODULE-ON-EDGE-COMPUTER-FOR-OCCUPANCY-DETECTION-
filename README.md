@@ -2,8 +2,8 @@
 
 #### Name : YUVARANI T
 #### Register no : 212222110057
-### Department : CSE(IOT)
-### Date :
+#### Department : CSE(IOT)
+#### Date :
 
 ### AIM:
 To interface a USB/CSI camera module with an edge computing platform (e.g., Raspberry Pi, Jetson Nano, etc.) and implement an occupancy detection system using the Histogram of Oriented Gradients (HOG) algorithm.
