@@ -1,57 +1,49 @@
 # EXPERIMENT-07-INTERFACING-CAMERA-MODULE-ON-EDGE-COMPUTER-FOR-OCCUPANCY-DETECTION-
 
+#### Name : YUVARANI T
+#### Register no : 212222110057
+### Department : CSE(IOT)
+### Date :
 
 ### AIM:
 To interface a USB/CSI camera module with an edge computing platform (e.g., Raspberry Pi, Jetson Nano, etc.) and implement an occupancy detection system using the Histogram of Oriented Gradients (HOG) algorithm.
 
 ### Apparatus/Software Required:
-S. No.	Equipment / Software	Specification
-1.	Edge Computing Device	Raspberry Pi 4 / Jetson Nano
-2.	Camera Module	USB Webcam / Pi Camera Module
-3.	Operating System	Raspbian OS / Ubuntu
-4.	Programming Language	Python 3.x
-5.	Libraries	OpenCV, imutils, NumPy
-6.	Display Output	HDMI Monitor / VNC Viewer
+
+S. No.	Equipment / Software	Specification<br>
+1.	Edge Computing Device	Raspberry Pi 4 / Jetson Nano<br>
+2.	Camera Module	USB Webcam / Pi Camera Module<br>
+3.	Operating System	Raspbian OS / Ubuntu<br>
+4.	Programming Language	Python 3.x<br>
+5.	Libraries	OpenCV, imutils, NumPy<br>
+6.	Display Output	HDMI Monitor / VNC Viewer<br>
 
 ### Theory:
 Histogram of Oriented Gradients (HOG) is a feature descriptor used in computer vision and image processing for the purpose of object detection. It counts occurrences of gradient orientation in localized portions of an image. HOG descriptors are particularly useful for detecting humans (pedestrians) in static images or video frames.
 
-Steps involved in HOG-based Occupancy Detection:
-
-Capture frames from the camera.
-
-Resize and preprocess the image.
-
-Use a pre-trained HOG descriptor with a linear SVM to detect people in the image.
-
-Annotate the image with bounding boxes where people are detected.
-
-Display or store the result.
-
-Circuit Diagram / Setup:
-Connect the USB camera to the edge computer via a USB port.
-
-Power on the edge device and boot into the OS.
-
-Ensure necessary Python libraries are installed.
+Steps involved in HOG-based Occupancy Detection:<br>
+Capture frames from the camera.<br>
+Resize and preprocess the image.<br>
+Use a pre-trained HOG descriptor with a linear SVM to detect people in the image.<br>
+Annotate the image with bounding boxes where people are detected.<br>
+Display or store the result.<br>
+Circuit Diagram / Setup:<br>
+Connect the USB camera to the edge computer via a USB port.<br>
+Power on the edge device and boot into the OS.<br>
+Ensure necessary Python libraries are installed.<br>
 
 ### Procedure:
-Set up the edge device with a monitor or SSH/VNC connection.
-
-Connect and verify the camera using commands like ls /dev/video* or vcgencmd get_camera.
-
-Install required libraries:
-
-bash
-Copy
-Edit
+Set up the edge device with a monitor or SSH/VNC connection.<br>
+Connect and verify the camera using commands like ls /dev/video* or vcgencmd get_camera.<br>
+Install required libraries:<br>
+```
 pip install opencv-python imutils numpy
-Write the Python code to initialize the camera and implement the HOG algorithm.
-
-Run the code and verify that the system detects human presence and draws bounding boxes.
+```
+Write the Python code to initialize the camera and implement the HOG algorithm.<br>
+Run the code and verify that the system detects human presence and draws bounding boxes.<br>
 
  ###  Python Code:
- 
+ ```
 import cv2
 import imutils
 
@@ -87,18 +79,16 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+```
 
+### OUTPUT :
 
-### SCREEN SHOTS OF OUTPUT 
+![image](https://github.com/user-attachments/assets/e74e10ee-f01f-46d8-bf18-ce3650d75aea)
 
+#### RASPI INTERFACE:
 
+![image](https://github.com/user-attachments/assets/3b52e859-8da8-41be-9ab6-83ab7bd0ff9a)
 
-
-
-### RASPI INTERFACE 
-
-
-
-
-### Result:
+### RESULT:
 Occupancy detection using the HOG algorithm was successfully implemented. The system was able to identify and highlight human presence in real-time video streams.
+
